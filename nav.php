@@ -51,7 +51,6 @@
 </head>
 <body>
 <nav >
-  
 <ul >
 			<li class="head">The Easy Bank</li>
 			<li><a href="index.php">Home</a></li>
@@ -61,5 +60,8 @@
 </ul>
 </nav>
 <hr/>
+	<?php
+	 #this block only for Linguist to understand that it is not a Hack file.
+	?>
 </body>
 </html>
