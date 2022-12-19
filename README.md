@@ -14,7 +14,7 @@
                     <li>Select and View Customer > Transfer Money > Select customer to transfer to > View all Customers .</li>
                     <li>Histroy of Each Transaction.</li></ul></li>
   <li>
-    No Login Page. No User Creation. Only transfer of money between multiple users.<li>
+    No Login Page. No User Creation. Only transfer of money between multiple users.</li>
    <li>
      Host the website at 000webhost, github.io, heroku app or any other free hosting provider.</li></ul>
      <b>Tools I used in my project</b><br>
