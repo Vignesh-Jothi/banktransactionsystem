@@ -21,7 +21,6 @@
         <b>Front-end :</b>  html, css.<br>
         <b>back-end  :</b> php.<br>
         <b>Database  :</b> MySQL.<br>
-        <b>Text Editor:</b> Sublime<br>
        <br>
        <b>Website link:</b><br>
        <a href="https://eb09.000webhostapp.com/">Easy bank</a><br>
