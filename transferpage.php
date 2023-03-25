@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="bank.png">
+	<link rel="stylesheet" href="style.css">
 	<title>TransferPage</title>
 </head>
 <body>
@@ -33,12 +34,12 @@
 				<th>Transfer</th>
 			</tr>
 			<tr>
-				<td><input type="text" list="name" autocomplete="off" name="from"> </td>
+				<td><input type="text" list="name" autocomplete="off" name="from" required> </td>
 				<td>
-				 <input type="text" list="name" autocomplete="off" name="to">
+				 <input type="text" list="name" autocomplete="off" name="to" required>
 				</td>
 				<td>
-					<input type="number" name="amt">
+					<input type="number" name="amt" required>
 				</td>
 				<td>
 					<input type="submit" name="sub" value="Transfer">

@@ -6,6 +6,7 @@
 <head>
 	<title>Home</title>
 	<link rel="icon" href="bank.png">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<?php include 'nav.php';  ?>
@@ -24,30 +25,28 @@
 				for ($i=1; $i<=9 ; $i++) { 
 					echo "<tr><td>";
 					if(isset($con)){
-					$qry = "select name from bank_rec where acc_num = 3200150$i";
-					$res = mysqli_query($con,$qry);
-					while ($row = mysqli_fetch_array($res)) {
+					$select_name_qry = "select name from bank_rec where acc_num = 3200150$i";
+					$select_res = mysqli_query($con,$select_name_qry);
+					while ($row = mysqli_fetch_array($select_res)) {
 						echo $row['name'];
 					}
 				}
-
 				 echo "</td><td>3200150$i</td><td>";
 				if(isset($con)){
-					$qry = "select email from bank_rec where acc_num = 3200150$i";
-					$res = mysqli_query($con,$qry);
-					while ($row = mysqli_fetch_array($res)) {
+					$select_mail_qry = "select email from bank_rec where acc_num = 3200150$i";
+					$select_res = mysqli_query($con,$select_mail_qry);
+					while ($row = mysqli_fetch_array($select_res)) {
 						echo $row['email'];
 					}
 				}
 				echo '</td><td>';
 				if(isset($con)){
-					$qry = "select bal from bank_rec where acc_num = 3200150$i";
-					$res = mysqli_query($con,$qry);
-					while ($row = mysqli_fetch_array($res)) {
+					$select_balance_qry = "select bal from bank_rec where acc_num = 3200150$i";
+					$select_res = mysqli_query($con,$select_balance_qry);
+					while ($row = mysqli_fetch_array($select_res)) {
 						echo $row['bal'];
 					}
 				}
-
 				echo '</td></tr>';
 				}
 				$qry = "select * from bank_rec";
@@ -61,7 +60,6 @@
 						echo $row['name'];
 					}
 				}
-
 				 echo "</td><td>320015$i</td><td>";
 				if(isset($con)){
 					$qry = "select email from bank_rec where acc_num = 320015$i";
@@ -78,7 +76,6 @@
 						echo $row['bal'];
 					}
 				}
-
 				echo '</td></tr>';
 				}
 			mysqli_close($con);
@@ -87,6 +84,5 @@
 		</table>
 	</div>
 	<br>
-	<button><a href="transferpage.php">Click To Transfer Page</a></button>
 </body>
 </html>

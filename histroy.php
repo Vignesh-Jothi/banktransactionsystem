@@ -5,16 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Payment Histroy</title>
 	<link rel="icon" href="bank.png">
+	<link rel="stylesheet" href="style.css">
 	<style>
-		h2{
-			display: flex;
-			justify-content: center;
-			width: 100%;
-		}
-		table{
-			width: 50vw;
-			font-size: 1em;		
-		}
 		th{
 			background-color: lightskyblue;
 		}
@@ -40,6 +32,7 @@
 </head>
 <body>
 	<?php include 'nav.php'; ?>
+	<div class="box">
 	<h2>History of the payment</h2>
 <table align="center" cellpadding="5px" cellspacing="0px" border="1px">
 	<tr>
@@ -74,5 +67,6 @@
 	mysqli_close($con);
  ?>
 </table>
+</div>
  </body>
 </html>

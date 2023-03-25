@@ -9,7 +9,6 @@
 		h2{
 			display: flex;
 			justify-content: center;
-			width: 100%;
 		}
 		table{
 			width: 50vw;
