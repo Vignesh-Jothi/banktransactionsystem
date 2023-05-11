@@ -1,4 +1,5 @@
-<?php
+<?php	
+	// Include the file that contains the database connection details
 	include 'connection.php';		
 ?>
 <!DOCTYPE html>
@@ -9,7 +10,11 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<?php include 'nav.php';  ?>
+	<?php
+		// Include the navigation menu
+		include 'nav.php'; 
+	 ?>
+	 <!-- Create a container for the customer information table -->
 	<div class="box">
 		<h2>Bank System </h2>
 		<h2>Customers Information</h2>
@@ -22,67 +27,92 @@
 				<th>Balance</th>
 			</tr>
 			<?php 
-				for ($i=1; $i<=9 ; $i++) { 
-					echo "<tr><td>";
-					if(isset($con)){
-					$select_name_qry = "select name from bank_rec where acc_num = 3200150$i";
-					$select_res = mysqli_query($con,$select_name_qry);
-					while ($row = mysqli_fetch_array($select_res)) {
-						echo $row['name'];
-					}
-				}
-				 echo "</td><td>3200150$i</td><td>";
 				if(isset($con)){
-					$select_mail_qry = "select email from bank_rec where acc_num = 3200150$i";
-					$select_res = mysqli_query($con,$select_mail_qry);
+				//Loop through the first nine customers and display their information
+				for ($i = 1; $i <= 9; $i++) { 
+					// Retrieve the customer's name
+					$select_name_qry = "SELECT name FROM bank_rec WHERE acc_num = 3200150$i";
+					$select_res = mysqli_query($con, $select_name_qry);
 					while ($row = mysqli_fetch_array($select_res)) {
-						echo $row['email'];
-					}
-				}
-				echo '</td><td>';
-				if(isset($con)){
-					$select_balance_qry = "select bal from bank_rec where acc_num = 3200150$i";
-					$select_res = mysqli_query($con,$select_balance_qry);
+						$name = $row['name'];
+					}				
+
+					// Retrieve the customer's email
+					$select_mail_qry = "SELECT email FROM bank_rec WHERE acc_num = 3200150$i";
+					$select_res = mysqli_query($con, $select_mail_qry);
 					while ($row = mysqli_fetch_array($select_res)) {
-						echo $row['bal'];
+						$email = $row['email'];
 					}
+				
+
+					// Retrieve the customer's balance
+					$select_balance_qry = "SELECT bal FROM bank_rec WHERE acc_num = 3200150$i";
+					$select_res = mysqli_query($con, $select_balance_qry);
+					while ($row = mysqli_fetch_array($select_res)) {
+						$balance = $row['bal'];
+					}
+
+					// Display the customer's information in the table
+					echo "<tr>
+							<td>$name</td>
+							<td>3200150$i</td>
+							<td>$email</td>
+							<td>$balance</td>
+						  </tr>";
 				}
-				echo '</td></tr>';
-				}
+			
+
+				// Retrieve the total number of rows in the bank_rec table		
 				$qry = "select * from bank_rec";
 				$res_s = mysqli_query($con,$qry);
+				// Loop through the remaining customers and display their information
 				for ($i=10; $i<=mysqli_num_rows($res_s) ; $i++) { 
-					echo "<tr><td>";
-					if(isset($con)){
-					$qry = "select name from bank_rec where acc_num = 320015$i";
-					$res = mysqli_query($con,$qry);
-					while ($row = mysqli_fetch_array($res)) {
-						echo $row['name'];
+					// Retrieve the customer's name
+					$select_name_qry = "SELECT name FROM bank_rec WHERE acc_num = 320015$i";
+					$select_res = mysqli_query($con, $select_name_qry);
+					while ($row = mysqli_fetch_array($select_res)) {
+						$name = $row['name'];
 					}
-				}
-				 echo "</td><td>320015$i</td><td>";
-				if(isset($con)){
-					$qry = "select email from bank_rec where acc_num = 320015$i";
-					$res = mysqli_query($con,$qry);
-					while ($row = mysqli_fetch_array($res)) {
-						echo $row['email'];
+				 	
+					// Retrieve the customer's email
+					$select_mail_qry = "SELECT email FROM bank_rec WHERE acc_num = 320015$i";
+					$select_res = mysqli_query($con, $select_mail_qry);
+					while ($row = mysqli_fetch_array($select_res)) {
+						$email = $row['email'];
 					}
-				}
-				echo '</td><td>';
-				if(isset($con)){
-					$qry = "select bal from bank_rec where acc_num = 320015$i";
-					$res = mysqli_query($con,$qry);
-					while ($row = mysqli_fetch_array($res)) {
-						echo $row['bal'];
+					
+					// Retrieve the customer's balance
+					$select_balance_qry = "SELECT bal FROM bank_rec WHERE acc_num = 320015$i";
+					$select_res = mysqli_query($con, $select_balance_qry);
+					while ($row = mysqli_fetch_array($select_res)) {
+						$balance = $row['bal'];
 					}
+					
+					// Display the customer's information in the table
+					echo "<tr>
+							<td>$name</td>
+							<td>320015$i</td>
+							<td>$email</td>
+							<td>$balance</td>
+						  </tr>";
 				}
-				echo '</td></tr>';
 				}
-			mysqli_close($con);
-			 ?>
+				else{
+					echo "We're sorry, but there was an error connecting to the database. 
+						Please check your connection settings and try again later. 
+						If the problem persists, please contact the website administrator for assistance.";
+				}
+				mysqli_close($con);
+			?>
 			</form>
 		</table>
 	</div>
 	<br>
+	<footer>
+		<p>&copy; 2023 Bank System</p>
+		<p>Contact me at <a href="mailto:jvignesh609@gmail.com">info</a></p>
+		<p>Find me on <a href="https://github.com/vignesh-jothi">GitHub</a></p>
+	</footer>
+
 </body>
 </html>
