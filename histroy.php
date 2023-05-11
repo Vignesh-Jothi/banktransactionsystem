@@ -47,7 +47,8 @@
 <?php 
 	include 'connection.php';	
 	if(isset($con)){
-		$qry = "select * from statement order by ctime desc";
+		#$qry = "select * from statement order by ctime desc";
+		$qry = "SELECT * FROM statement ORDER BY DATE(paydate) DESC, TIME(ctime) DESC";
 		$res = mysqli_query($con,$qry);
 		if(isset($res))
 		{
@@ -68,5 +69,10 @@
  ?>
 </table>
 </div>
+<footer>
+		<p>&copy; 2023 Bank System</p>
+		<p>Contact me at <a href="mailto:jvignesh609@gmail.com">info</a></p>
+		<p>Find me on <a href="https://github.com/vignesh-jothi">GitHub</a></p>
+</footer>
  </body>
 </html>
