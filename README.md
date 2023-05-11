@@ -29,7 +29,7 @@ The purpose of the project is to provide a system that allows users to perform b
         <b>Database  :</b> MySQL.<br>
        <br>
        <b>Website link:</b><br>
-       <a href="">Easy bank</a><br>
+       <a href="https://easyio.000webhostapp.com/">Easy bank</a><br>
 
 
  
