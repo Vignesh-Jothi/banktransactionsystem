@@ -71,8 +71,8 @@
 </div>
 <footer>
 		<p>&copy; 2023 Bank System</p>
-		<p>Contact me at <a href="mailto:jvignesh609@gmail.com">info</a></p>
-		<p>Find me on <a href="https://github.com/vignesh-jothi">GitHub</a></p>
+		<p>Contact me at <a href="mailto:jvignesh609@gmail.com" target="_blank">info</a></p>
+		<p>Find me on <a href="https://github.com/vignesh-jothi" target="_blank">GitHub</a></p>
 </footer>
  </body>
 </html>
