@@ -1,6 +1,9 @@
 <html>
 <head>
 	<style>
+		nav{
+			background-color: #f5f5f5;
+		}
 		.head{
 			font-size: 20px;
 			padding-right: 50%;
@@ -44,6 +47,21 @@
 		button:hover{
 			transition: 0.5s;
 			background-color: lightskyblue;
+		}
+		footer {
+			background-color: #f5f5f5;
+			padding: 20px;
+			text-align: center;
+			font-size: 16px;
+			color: #666;
+		}
+		footer a {
+			color: #337ab7;
+			text-decoration: none;
+		}
+		footer a:hover {
+			transition: 0.5s;
+			color: skyblue;
 		}
 
 </style>

@@ -23,7 +23,7 @@
     			mysqli_close($con);
     		 ?>
 	</datalist>
-	<div class="box">
+	<main class="box">
 		<h2>Transfer Page</h2>
 		<table border="1px" cellpadding="5px" cellspacing="0px" align="center">
 			<form action="statement.php" method="post">	
@@ -47,6 +47,11 @@
 			</tr>
 </form>
 </table>
-</div>
+</main>
+<footer>
+		<p>&copy; 2023 Bank System</p>
+		<p>Contact me at <a href="mailto:jvignesh609@gmail.com">info</a></p>
+		<p>Find me on <a href="https://github.com/vignesh-jothi">GitHub</a></p>
+</footer>
 </body>
 </html>

@@ -8,7 +8,8 @@
 <?php include 'nav.php';  ?>
 <h2>Statement Page</h2>
 <?php
-include 'connection.php';
+#include 'connection.php';
+require_once 'connection.php';
 if(function_exists('date_default_timezone_set'))
 {
     date_default_timezone_set("Asia/Kolkata");
@@ -78,5 +79,10 @@ if(isset($con))
 	mysqli_close($con);
 ?> 
 </table>
+<footer>
+		<p>&copy; 2023 Bank System</p>
+		<p>Contact me at <a href="mailto:jvignesh609@gmail.com">info</a></p>
+		<p>Find me on <a href="https://github.com/vignesh-jothi">GitHub</a></p>
+</footer>
 </body>
 </html>
